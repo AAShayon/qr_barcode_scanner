@@ -58,6 +58,9 @@ class _CameraScanPreviewPageState extends State<CameraScanPreviewPage> {
                       height: _height,
                       width: _width,
                       child: QrCamera(
+                        formats: [
+                          BarcodeFormats.PDF417
+                        ],
                         onError: (context, error) => Text(
                           error.toString(),
                           style: const TextStyle(color: Colors.red),
@@ -357,3 +360,26 @@ class _DragDropState extends State<DragDrop> {
     );
   }
 }
+
+//
+// enum BarcodeFormats {
+//   ALL_FORMATS,
+//   AZTEC,
+//   CODE_128,
+//   CODE_39,
+//   CODE_93,
+//   CODABAR,
+//   DATA_MATRIX,
+//   EAN_13,
+//   EAN_8,
+//   ITF,
+//   PDF417,
+//   QR_CODE,
+//   UPC_A,
+//   UPC_E,
+// }
+//
+// const defaultBarcodeFormats = [
+//   BarcodeFormats.ALL_FORMATS,
+// ];
+

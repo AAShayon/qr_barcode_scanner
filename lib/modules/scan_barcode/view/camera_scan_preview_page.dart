@@ -6,14 +6,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qr_barcode_scanner/main.dart';
 import 'package:qr_mobile_vision/qr_camera.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+class CameraScanPreviewPage extends StatefulWidget {
+  const CameraScanPreviewPage({super.key});
 
   @override
-  State<Homepage> createState() => _HomepageState();
+  State<CameraScanPreviewPage> createState() => _CameraScanPreviewPageState();
 }
 
-class _HomepageState extends State<Homepage> {
+class _CameraScanPreviewPageState extends State<CameraScanPreviewPage> {
    // late CameraController controller;
   final bool isFlashOn=false;
 
@@ -26,24 +26,6 @@ class _HomepageState extends State<Homepage> {
     // TODO: implement initState
     super.initState();
 
-    // controller = CameraController(cameras[0], ResolutionPreset.max);
-    // controller.initialize().then((_) {
-    //   if (!mounted) {
-    //     return;
-    //   }
-    //   setState(() {});
-    // }).catchError((Object e) {
-    //   if (e is CameraException) {
-    //     switch (e.code) {
-    //       case 'CameraAccessDenied':
-    //       // Handle access errors here.
-    //         break;
-    //       default:
-    //       // Handle other errors here.
-    //         break;
-    //     }
-    //   }
-    // });
   }
   @override
   Widget build(BuildContext context) {

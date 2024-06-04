@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:qr_barcode_scanner/modules/scan_barcode/view/camera_scan_preview_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -25,13 +26,29 @@ class HomePage extends StatelessWidget {
               ),
               itemCount: buttonDataList.length,
               itemBuilder: (context,index){
-                return Container(
-                  // height: 90,
-                  // width: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.green.shade200
+                return InkWell(
+                  onTap: (){
+                    if(index==0){
+
+                    }
+                    if(index==1){
+
+                    }
+                    if(index==2){
+
+                    }
+                    if(index==3){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const CameraScanPreviewPage()));
+                    }
+                  },
+                  child: Container(
+                    // height: 90,
+                    // width: 100,
+                    decoration: BoxDecoration(
+                        color: Colors.green.shade200
+                    ),
+                    child: Center(child: Text("${buttonDataList[index].title}")),
                   ),
-                  child: Center(child: Text("${buttonDataList[index].title}")),
                 );
               }
           )
